@@ -9,7 +9,7 @@ def make_response(days: int = 1) -> None:
     st.subheader(f"Prediction for next { days } days")
     days_array = [ x+1 for x in range(days) ]
     model = joblib.load('trained_model.pk1')
-    predictions = model.predict(start = 1, end = days)
+    predictions = model.predict(start = 398, end = 397 + days)
     data = pd.DataFrame({
         'Days': days_array,
         'Predictions': predictions
