@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from matplotlib import pyplot as plt
 import joblib
 
 st.header('Electrical Production Based ARIMA Model')
