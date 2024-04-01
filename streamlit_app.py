@@ -5,6 +5,7 @@ import joblib
 st.header('Electrical Production Based ARIMA Model')
 
 def make_response(days: int = 1) -> None:
+    st.subheader(f"Prediction for next { days } days")
     days_array = [ x+1 for x in range(days) ]
     model = joblib.load('trained_model.pk1')
     predictions = model.predict(start = 1, end = days)
