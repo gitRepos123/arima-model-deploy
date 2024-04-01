@@ -15,10 +15,11 @@ def make_response(days: int = 1) -> None:
         'Predictions': predictions
     })
     st.table(data)
+    fig = plt.figure()
     plt.xlabel('Days')
     plt.ylabel('Production')
     plt.plot(days_array, predictions, color = "red")
-    st.write(plt.show())
+    st.pyplot(fig)
 
 def init_app():
     days = st.slider(label = 'Input the number of days', min_value = 1, max_value = 7, step = 1)
