@@ -3,7 +3,7 @@ import pandas as pd
 from matplotlib import pyplot as plt
 import joblib
 
-st.header('Electrical Production Based ARIMA Model')
+st.header('Electrical Production Based on ARIMA Model')
 
 def make_response(days: int = 1) -> None:
     st.subheader(f"Prediction for next { days } days")
