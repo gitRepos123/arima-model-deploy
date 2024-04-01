@@ -15,10 +15,11 @@ def make_response(days: int = 1) -> None:
         'Predictions': predictions
     })
     st.table(data)
+    st.subheader("Days vs. Production Trend")
     fig = plt.figure()
     plt.xlabel('Days')
     plt.ylabel('Production')
-    plt.plot(days_array, predictions, color = "red")
+    plt.plot(days_array, predictions, color = "green")
     st.pyplot(fig)
 
 def init_app():
